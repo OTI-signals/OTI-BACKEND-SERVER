@@ -1,23 +1,23 @@
 const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser");
-const register = require("./routes/register");
-const login = require("./routes/login");
+const register = require("./routes/register.js");
+const login = require("./routes/login.js");
 const mongoose = require("mongoose");
 const app = express();
 const PORT = 3002;
 const http = require("http");
 const { Server } = require("socket.io");
 const server = http.createServer(app);
-const userss = require("./routes/users");
-const updateUser = require("./routes/updateUser");
+const userss = require("./routes/users.js");
+const updateUser = require("./routes/updateUser.js");
 const authMiddleware = require("./middleware/auth.js");
-const generateOTP = require("./routes/otp/otp");
+const generateOTP = require("./routes/otp/otp.js");
 const localVariables = require("./middleware/localVariable.js");
-const verifyOTP = require("./routes/otp/verify");
-const passwordReset = require("./routes/auth/resetPassword");
+const verifyOTP = require("./routes/otp/verify.js");
+const passwordReset = require("./routes/auth/resetPassword.js");
 const uploadVideo = require("./routes/auth/uploadVideo.js");
-const createPost = require("./routes/posts/posts");
+const createPost = require("./routes/posts/posts.js");
 const allPosts = require("./routes/posts/allPosts.js");
 const usersPosts = require("./routes/posts/getPost.js");
 const editPost = require("./routes/posts/editPost.js");
@@ -36,7 +36,7 @@ const status = require("./routes/subscriptions/status.js");
 const Message = require("./models/Message.js");
 const messagesRouter = require("./routes/Messages.js");
 const Post = require("./models/Providers/Post.js");
-const rating = require("./routes/rating/rating");
+const rating = require("./routes/rating/rating.js");
 const withdraws = require("./routes/withdrawal/withdrawal.js");
 require("dotenv").config();
 
@@ -140,14 +140,14 @@ app.use("/api/v1/rating/", authMiddleware, rating);
 
 app.disable("x-powered-by");
 
-const uri = process.env.MONGODB_URI;
+const uri =
+  "mongodb+srv://ibeneme_:Ibeneme_1996@tradersignalapp.qbqd2hz.mongodb.net/?retryWrites=true&w=majority&appName=TraderSignalApp";
 app.get("/", (req, res) => {
   res.send("Hello, World!");
 });
 server.listen(PORT, () => {
   console.log(`Server is up and running on port ${PORT}`);
-});
-
+});//docker build -t server .
 // const accountSid = "ACbaa8552989a27c3f373394704ac1bacb";
 // const authToken = "971c678690769ff62e25934e86f8b7e7"; // Remove square brackets
 // const client = require("twilio")(accountSid, authToken);

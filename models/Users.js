@@ -1,6 +1,7 @@
-const mongoose = require("mongoose");
-const Balance = require("./Providers/Balance");
 
+
+
+const mongoose = require("mongoose");
 const UserSchema = new mongoose.Schema(
   {
     username: {

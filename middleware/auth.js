@@ -1,7 +1,8 @@
+const express = require("express");
 const jwt = require("jsonwebtoken");
 
 const authMiddleware = (req, res, next) => {
-  const secretKey =  process.env.JWT_SECRET_KEY;
+  const secretKey = 'ibenemeSignalApp';
   try {
     const token = req.headers.authorization.split(" ")[1];
 
@@ -18,7 +19,7 @@ const authMiddleware = (req, res, next) => {
           .json({ error: "Authentication Failed: Invalid token" });
       } else {
         req.user = decodedToken;
-        console.log(decodedToken, 'decodedToken')
+        console.log(decodedToken, "decodedToken");
         next();
       }
     });

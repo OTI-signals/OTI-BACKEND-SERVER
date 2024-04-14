@@ -13,7 +13,7 @@
   "dependencies": {
     "axios": "^1.6.8",
     "backblaze-b2": "^1.7.0",
-    "bcrypt": "^5.1.1",
+    "bcrypt": "^5.0.1",
     "body-parser": "^1.20.2",
     "cors": "^2.8.5",
     "crypto-address-validators": "^1.0.3",
@@ -22,7 +22,7 @@
     "joi": "^17.12.2",
     "jsonwebtoken": "^9.0.2",
     "mongodb": "^6.5.0",
-    "mongoose": "^8.2.2",
+    "mongoose": "^8.3.1",
     "multer": "^1.4.5-lts.1",
     "multicoin-address-validator": "^0.5.16",
     "mutter": "^1.0.1",

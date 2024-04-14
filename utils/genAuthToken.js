@@ -1,5 +1,6 @@
+
+const jwtSecretKey = 'ibenemeSignalApp';
 const jwt = require("jsonwebtoken");
-const jwtSecretKey = process.env.JWT_SECRET_KEY;
 
 const genAuthToken = (user) => {
   const secretKey = jwtSecretKey;

@@ -1,10 +1,10 @@
-const bcrypt = require("bcrypt");
+
 const Joi = require("joi");
 const jwt = require("jsonwebtoken");
 const express = require("express");
 const genAuthToken = require("../utils/genAuthToken");
 const User = require("../models/Users");
-
+const bcrypt = require("bcrypt");
 const router = express.Router();
 
 const validate = require("crypto-address-validators"); // Import validate function using CommonJS syntax
