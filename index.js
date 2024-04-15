@@ -180,5 +180,5 @@ mongoose
     useUnifiedTopology: true,
     connectTimeoutMS: 100000,
   })
-  .then(() => console.log("MongoDB connected successfully"))
+  .then(() => console.log("MongoDB connected here and successfully"))
   .catch((error) => console.log("MongoDB connection failed", error));
