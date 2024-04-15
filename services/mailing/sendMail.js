@@ -1,7 +1,6 @@
 const nodemailer = require("nodemailer");
 const path = require("path");
 const emailPass = process.env.emailPass;
-const emailForMails = process.env.emailForMails;
 
 const logoPath = path.join(__dirname, "../../assests/image/logo.png");
 
@@ -12,8 +11,8 @@ const transporter = nodemailer.createTransport({
   secure: true,
   debug: true,
   auth: {
-    user: emailForMails,
-    pass: emailPass,
+    user: 'ibenemeikenna96@gmail.com',
+    pass: 'urvf bppa wbgo bmsm',
   },
 });
 
