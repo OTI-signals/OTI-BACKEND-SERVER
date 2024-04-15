@@ -143,7 +143,7 @@ app.disable("x-powered-by");
 const uri =
   "mongodb+srv://ibeneme_:Ibeneme_1996@tradersignalapp.qbqd2hz.mongodb.net/?retryWrites=true&w=majority&appName=TraderSignalApp";
 app.get("/", (req, res) => {
-  res.send("Hello, World people!");
+  res.send("Hello, World people todayyyy!");
 });
 server.listen(PORT, () => {
   console.log(`Server is up and running on port ${PORT}`);
